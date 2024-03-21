@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body{
+    background-image: url("hl.jpg");
     height: 100%;
+    font-family: "Times New Roman", sans-serif;
 }
 
 button {
-
     font-size: 3vh;
     width: 20rem;
     cursor: pointer;
@@ -21,7 +22,7 @@ button {
     padding-top: 5vh;
     height: 80vh;
     background-color: #ffffff;
-    border: 0.1rem solid rgb(0, 0, 0);
+    border: 5px solid purple;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +32,7 @@ button {
 
 .contact {
     height: 20%;
-    border: 0.1rem solid black;
+    border: 2px dashed black;
     margin-bottom: 1rem;
     display: flex;
     justify-content:space-around;
@@ -55,18 +56,13 @@ button {
     align-items: center;
 }
 
-.form{
+.form   {
     height: 10vh;
     width: 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-.form > input {
-    display: flex;
-    flex-direction: row;
 }
 
 .contacts{
@@ -85,7 +81,13 @@ button {
 .contacts .list-container {
     width: 100%;
     padding: 1rem;
-    border: 0.1rem solid black;
+    border: 2px solid purple;
     height: 32rem;
     overflow-y: scroll;
+}
+
+button {
+    background-color: hotpink;
+    border-radius: 20px;
+
 }
