@@ -1,6 +1,9 @@
 function addContact() {
     const name = document.getElementsByName('name')[0].value;
     const phone = document.getElementsByName('phone')[0].value;
+    if(phone.length > 12 || isNaN(+phone)) {
+        throw Error("Invalid phone");
+    }
 
     fetch('/add', {
         method: 'POST',
@@ -15,6 +18,9 @@ async function editContact() {
     const id = document.querySelector('.form').getAttribute('data-key');
     const name = document.querySelector('input[name="name"]').value;
     const phone = document.querySelector('input[name="phone"]').value;
+    if(phone.length > 12 || isNaN(+phone)) {
+        throw Error("Invalid phone");
+    }
 
     try {
         await fetch(`/update?id=${id}`, {
